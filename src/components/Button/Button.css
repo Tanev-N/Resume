@@ -1,0 +1,25 @@
+.AppHeader__navigator__element {
+    padding-left: 18px;
+    text-decoration: none;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: var(--size-font-base);
+    letter-spacing: 5.5%;
+    color: var(--color-text-description);
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+      color: var(--color-primary);
+     
+    }
+    &.secondary {
+      color: white;
+      background-color: var(--color-primary);
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: var(--color-secondary);
+      }
+    }
+  }

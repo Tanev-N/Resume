@@ -1,0 +1,37 @@
+.content__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 18px;
+    width: 350px;
+    height: 280px;
+    border-radius: 13px;
+    box-shadow: 0px 5px 26px 5px rgba(0, 0, 0, 0.17);
+    transition: transform 0.3s;
+    color: var(--color-text-description);
+    font-size: var(--size-font-base);
+    letter-spacing: 5.5%;
+    font-weight: normal;
+    &.stackCard {
+      width: 120px;
+      height: 120px;
+      padding-left: 13px;
+      padding-right: 13px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .content__card__image{
+        width: 60px;
+        height: 60px;
+      }
+    }
+    
+  }
+  
+  .content__card:hover {
+    transform: scale(1.05);
+  }

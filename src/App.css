@@ -1,0 +1,107 @@
+.AppHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-left: 134px;
+  padding-right: 134px;
+  padding-top: 35px;
+  padding-bottom: 41px;
+  /* width: 100%; */
+  .AppHeader__navigator {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: fit-content;
+  }
+}
+ 
+
+
+.AppMain {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-left: 134px;
+  padding-right: 134px;
+}
+
+
+
+
+
+.AppFooter {
+  padding: 0px;
+  background-image: url("./assets/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 450px;
+  .AppFooter__background {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+.AppHeader__burger{
+  width: 80px;
+  height: 80px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.AppHeader__navigator.show { 
+  display: flex; 
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --size-font-big: 30px; 
+    --size-font-medium: 25px; 
+    --size-font-base: 20px; 
+    --size-font-small: 14px; 
+  }
+  
+   .AppHeader__burger{
+    display: flex;
+   }
+   .AppHeader__navigator{
+    display: none !important;
+    gap: 10px !important;
+   }
+   
+   .AppHeader__navigator.show {
+    display: flex !important; 
+    flex-direction: column; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: fit-content; 
+    background-color: white; 
+    box-shadow: 0px 5px 26px 5px rgba(0, 0, 0, 0.17); 
+    z-index: 1000; 
+    padding: 20px; 
+  }
+  .AppHeader,
+  .AppMain {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .AppHeader {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+}
+

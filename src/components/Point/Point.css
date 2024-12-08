@@ -1,0 +1,65 @@
+.AppMain__point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+  .AppMain__point__title {
+    color: var(--color-secondary);
+    font-size: var(--size-font-medium);
+    letter-spacing: 5.5%;
+  }
+  .AppMain__point__content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  &.secondaryPoint{
+    font-weight: bold;
+  }
+  &.mainPoint {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 65px;
+    .AppMain__point__title {
+      flex-direction: column;
+      gap: 25px;
+
+      .title__main {
+        letter-spacing: 0.5%;
+        .title__main-primary {
+          font-size: var(--size-font-big);
+          font-weight: bold;
+        }
+        .title__main-secondary {
+          font-size: var(--size-font-medium);
+        }
+      }
+      .title__description {
+        color: var(--color-text-description);
+        letter-spacing: 1.5%;
+        font-size: var(--size-font-base);
+      }
+    }
+    .AppMain__point__content {
+      .content__MainAvatar {
+        border-radius: 1000px;
+        width: 500px;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .AppMain__point__content {
+    flex-direction: column !important;
+  }
+  .mainPoint {
+    flex-direction: column !important;
+   }
+   .content__MainAvatar {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}

@@ -1,0 +1,50 @@
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text-description);
+    gap: 30px;
+    font-size: var(--size-font-base);
+    font-weight: normal;
+    letter-spacing: 5.5%;
+    width: 300px;
+    cursor: pointer;
+    .contact__image img:hover {
+      filter: invert(5%) sepia(85%) saturate(2852%) hue-rotate(212deg)
+        brightness(97%) contrast(106%);
+    }
+  }
+
+  .copy-notification {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: var(--size-font-small);
+    font-weight: bold;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+}
