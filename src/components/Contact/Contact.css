@@ -10,6 +10,9 @@
     letter-spacing: 5.5%;
     width: 300px;
     cursor: pointer;
+    .contact__image img {
+        user-select: none;
+    }
     .contact__image img:hover {
       filter: invert(5%) sepia(85%) saturate(2852%) hue-rotate(212deg)
         brightness(97%) contrast(106%);

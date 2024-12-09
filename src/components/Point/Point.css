@@ -12,6 +12,8 @@
   .AppMain__point__content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
   }
   &.secondaryPoint{
@@ -53,7 +55,7 @@
 
 @media (max-width: 1200px) {
   .AppMain__point__content {
-    flex-direction: column !important;
+    /* flex-direction: column !important; */
   }
   .mainPoint {
     flex-direction: column !important;

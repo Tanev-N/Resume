@@ -29,7 +29,11 @@
         height: 60px;
       }
     }
-    
+    .content__card__image {
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      max-height: 200px;
+    }
   }
   
   .content__card:hover {

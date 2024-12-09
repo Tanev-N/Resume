@@ -22,7 +22,8 @@ import reactJS from "./assets/react.svg";
 import redux from "./assets/redux.svg";
 import sass from "./assets/sass.svg";
 
-
+import gigamail from "./assets/Gigamail.png";
+import django from "./assets/django1.png";
 
 import "./App.css";
 
@@ -40,61 +41,69 @@ function App() {
   const StackData = [
     {
       path: vite,
-      title: "Vite"
+      title: "Vite",
     },
     {
       path: ts,
-      title: "TypeScript"
+      title: "TypeScript",
     },
     {
       path: reactJS,
-      title: "React"
+      title: "React",
     },
     {
       path: redux,
-      title: "Redux"
+      title: "Redux",
     },
     {
       path: boostrap,
-      title: "Boostrap"
+      title: "Boostrap",
     },
     {
       path: nodeJS,
-      title: "NodeJS"
+      title: "NodeJS",
     },
     {
       path: sass,
-      title: "Sass"
+      title: "Sass",
     },
     {
       path: nginx,
-      title: "Nginx"
-    },
-  ]
-  const NavigationData = [
-    {mark: "#about",
-      text: "О себе",
-      isSecondary: false
-    },
-    {mark: "#stack",
-      text: "Стек",
-      isSecondary: false
-    },
-    {mark: "#portfolio",
-      text: "Портфолио",
-      isSecondary: false
-    },
-    {mark: "#contacts",
-      text: "Мои контакты",
-      isSecondary: true
+      title: "Nginx",
     },
   ];
 
+  const PortfolioData = [
+    {
+      path: gigamail,
+      title: "Giga-mail.ru",
+    },
+    {
+      path: django,
+      title: "StackOverflow",
+    },
+  ];
+
+  const NavigationData = [
+    { mark: "#about", text: "О себе", isSecondary: false },
+    { mark: "#stack", text: "Стек", isSecondary: false },
+    { mark: "#portfolio", text: "Портфолио", isSecondary: false },
+    { mark: "#contacts", text: "Мои контакты", isSecondary: true },
+  ];
+
   const ContactsData = [
-    { Path: githubPath, text: "Tanev-N" },
-    { Path: telegramPath, text: "@Teralai" },
-    { Path: telephonePath, text: "+7 (988) 158-43-04" },
-    { Path: emailPath, text: "kolya_tanev@mail.ru" },
+    { Path: githubPath, text: "Tanev-N", href: "https://github.com/Tanev-N" },
+    { Path: telegramPath, text: "@Teralai", href: "https://t.me/Teralai" },
+    {
+      Path: telephonePath,
+      text: "+7 (988) 158-43-04",
+      href: "tel:+79881584304",
+    },
+    {
+      Path: emailPath,
+      text: "kolya_tanev@mail.ru",
+      href: "mailto:kolya_tanev@mail.ru",
+    },
   ];
 
   const PointsData = [
@@ -109,10 +118,26 @@ function App() {
           </div>
           <div className="title__description">
             <p className="title__description-primary">
-              Занимаюсь фронтендом на протяжении последнего года. Был
-              коммерческий опыт в течении 2 месяцев работы в промышленной
-              компании. Сейчас являюсь тимлидом команды по разработке почты в
-              образовательном проекте VK Education.
+              <p>
+                Я — студент 3 курса бакалавриата МГТУ им. Н.Э. Баумана,
+                направление «Информатика и вычислительная техника».
+              </p>
+
+              <p>Имею опыт разработки фронтенд-приложений, включая:</p>
+              <ul>
+                <li>почтовый клиент;</li>
+                <li>аналог платформы StackOverflow.</li>
+              </ul>
+
+              <p>
+                Экспериментировал с созданием собственного аналога React,
+                используя архитектуру Feature-Sliced Design (FSD).
+              </p>
+
+              <p>
+                Стремлюсь к постоянному развитию в профессии, которая приносит
+                мне настоящее удовольствие.
+              </p>
             </p>
           </div>
         </>
@@ -125,7 +150,23 @@ function App() {
       children: (
         <>
           {StackData.map((card, index) => (
-            <Card name="stackCard" key={index} path={card.path} title={card.title} />
+            <Card
+              name="stackCard"
+              key={index}
+              path={card.path}
+              title={card.title}
+            />
+          ))}
+        </>
+      ),
+    },
+    {
+      id: "portfolio",
+      titleNode: <>Портфолио</>,
+      children: (
+        <>
+          {PortfolioData.map((card, index) => (
+            <Card name="" key={index} path={card.path} title={card.title} />
           ))}
         </>
       ),
@@ -136,12 +177,18 @@ function App() {
       children: (
         <>
           {ContactsData.map((contact, index) => (
-            <Contact key={index} Path={contact.Path} text={contact.text} />
+            <Contact
+              href={contact.href}
+              key={index}
+              Path={contact.Path}
+              text={contact.text}
+            />
           ))}
         </>
       ),
     },
   ];
+
   return (
     <>
       <header className="AppHeader">
@@ -150,7 +197,12 @@ function App() {
         </div>
         <div className={`AppHeader__navigator ${isMenuOpen ? "show" : ""}`}>
           {NavigationData.map((navigatorEl) => (
-            <Button isSecondary= {navigatorEl.isSecondary} onClick={handleNavClick} mark={navigatorEl.mark} text={navigatorEl.text}></Button>
+            <Button
+              isSecondary={navigatorEl.isSecondary}
+              onClick={handleNavClick}
+              mark={navigatorEl.mark}
+              text={navigatorEl.text}
+            ></Button>
           ))}
         </div>
       </header>
