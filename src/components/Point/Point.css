@@ -56,6 +56,7 @@
 @media (max-width: 1200px) {
   .AppMain__point__content {
     /* flex-direction: column !important; */
+    gap: 30px !important;
   }
   .mainPoint {
     flex-direction: column !important;

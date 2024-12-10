@@ -96,7 +96,7 @@ function App() {
     { Path: telegramPath, text: "@Teralai", href: "https://t.me/Teralai" },
     {
       Path: telephonePath,
-      text: "+7 (988) 158-43-04",
+      text: "+7(988)158-43-04",
       href: "tel:+79881584304",
     },
     {

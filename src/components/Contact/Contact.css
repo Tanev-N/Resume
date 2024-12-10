@@ -54,7 +54,8 @@
 
 @media (max-width: 1200px) {
   .contact {
-    width: 220px;
+    width: 130px;
+    font-size: var(--size-font-small);
     .contact__image img {
       width: 100px;
       height: 100px;
