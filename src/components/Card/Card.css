@@ -56,5 +56,10 @@
             height: 60px;
           }
         }    
+        .content__card__image {
+    
+          max-height: 180px;
+        }
     }
+    
 }

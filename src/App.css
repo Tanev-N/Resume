@@ -69,7 +69,7 @@
     --size-font-big: 30px; 
     --size-font-medium: 25px; 
     --size-font-base: 20px; 
-    --size-font-small: 14px; 
+    --size-font-small: 13px; 
   }
   
    .AppHeader__burger{
@@ -95,8 +95,8 @@
   }
   .AppHeader,
   .AppMain {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   
   .AppHeader {
