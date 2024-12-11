@@ -51,10 +51,10 @@ function App() {
       path: reactJS,
       title: "React",
     },
-    {
-      path: redux,
-      title: "Redux",
-    },
+    // {
+    //   path: redux,
+    //   title: "Redux",
+    // },
     {
       path: boostrap,
       title: "Boostrap",
