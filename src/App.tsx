@@ -77,10 +77,12 @@ function App() {
     {
       path: gigamail,
       title: "Giga-mail.ru",
+      link: "https://github.com/frontend-park-mail-ru/2024_2_Gigachads"
     },
     {
       path: django,
       title: "StackOverflow",
+      link: "https://github.com/Tanev-N/BMSTU-VK-Education/tree/main/web/askme_tanev"
     },
   ];
 
@@ -166,7 +168,7 @@ function App() {
       children: (
         <>
           {PortfolioData.map((card, index) => (
-            <Card name="" key={index} path={card.path} title={card.title} />
+            <Card name="portfolio"  key={index} path={card.path} title={card.title} onClick= {() => window.open(card.link) } />
           ))}
         </>
       ),

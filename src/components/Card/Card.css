@@ -17,6 +17,9 @@
     font-size: var(--size-font-base);
     letter-spacing: 5.5%;
     font-weight: normal;
+    &.portfolio {
+      cursor: pointer;
+    }
     &.stackCard {
       width: 120px;
       height: 120px;
