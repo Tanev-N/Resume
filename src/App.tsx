@@ -19,7 +19,7 @@ import ts from "./assets/ts.svg";
 import nodeJS from "./assets/nodejs.svg";
 import vite from "./assets/vite.svg";
 import reactJS from "./assets/react.svg";
-import redux from "./assets/redux.svg";
+// import redux from "./assets/redux.svg";
 import sass from "./assets/sass.svg";
 
 import gigamail from "./assets/Gigamail.png";
