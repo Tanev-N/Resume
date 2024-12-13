@@ -44,6 +44,8 @@
       }
     }
     .AppMain__point__content {
+      display: flex;
+      align-self: flex-start;
       .content__MainAvatar {
         border-radius: 1000px;
         width: 500px;
@@ -61,8 +63,14 @@
   .mainPoint {
     flex-direction: column !important;
    }
-   .content__MainAvatar {
-    width: 300px !important;
-    height: 300px !important;
+   .AppMain__point__content {
+    display: flex;
+    align-self: center !important;
+    justify-self: center;
+    .content__MainAvatar {
+      border-radius: 1000px;
+      width: 300px !important;
+      height: 300px !important;
+    }
   }
 }
