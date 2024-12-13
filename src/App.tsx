@@ -77,12 +77,12 @@ function App() {
     {
       path: gigamail,
       title: "Giga-mail.ru",
-      link: "https://github.com/frontend-park-mail-ru/2024_2_Gigachads"
+      link: "https://github.com/frontend-park-mail-ru/2024_2_Gigachads",
     },
     {
       path: django,
       title: "StackOverflow",
-      link: "https://github.com/Tanev-N/BMSTU-VK-Education/tree/main/web/askme_tanev"
+      link: "https://github.com/Tanev-N/BMSTU-VK-Education/tree/main/web/askme_tanev",
     },
   ];
 
@@ -120,15 +120,31 @@ function App() {
           </div>
           <div className="title__description">
             <p className="title__description-primary">
+              <p>Мне 19 лет, проживаю в Москве.</p>
               <p>
-                Я — студент 3 курса бакалавриата МГТУ им. Н.Э. Баумана,
-                направление «Информатика и вычислительная техника».
+                Cтудент 3 курса бакалавриата МГТУ им. Н.Э. Баумана, направление
+                «Информатика и вычислительная техника».
               </p>
 
-              <p>Имею опыт разработки фронтенд-приложений, включая:</p>
+              <p>Имею учебный опыт разработки фронтенд-приложений, включая:</p>
               <ul>
-                <li>почтовый клиент;</li>
-                <li>аналог платформы StackOverflow.</li>
+                <li>
+                  Аналог платформы StackOverflow:
+                  <p>
+                    Ознакомился с основами веб-разработки, взаимодействием
+                    фронтенда и бэкенда, научился деплоить проекты на сервер, а
+                    также использовать Git и GitHub.
+                  </p>
+                </li>
+                <li>
+                  Почтовый клиент:
+                  <p>
+                    Углубил знания в области фронтенда, включая разработку SPA,
+                    использование CSS-препроцессоров, создание анимаций и работу
+                    с бандлерами. Также получил опыт работы в команде,
+                    координации людей в исполнении роли тимлида.
+                  </p>
+                </li>
               </ul>
 
               <p>
@@ -137,9 +153,15 @@ function App() {
               </p>
 
               <p>
+                Люблю спорт: регулярно посещаю спортзал и занимаюсь в
+                волейбольной секции.
+              </p>
+
+              <p>
                 Стремлюсь к постоянному развитию в профессии, которая приносит
                 мне настоящее удовольствие.
               </p>
+              <p>Готов работать 25 часов в неделю. (на пол ставки)</p>
             </p>
           </div>
         </>
@@ -168,7 +190,13 @@ function App() {
       children: (
         <>
           {PortfolioData.map((card, index) => (
-            <Card name="portfolio"  key={index} path={card.path} title={card.title} onClick= {() => window.open(card.link) } />
+            <Card
+              name="portfolio"
+              key={index}
+              path={card.path}
+              title={card.title}
+              onClick={() => window.open(card.link)}
+            />
           ))}
         </>
       ),
